@@ -2,7 +2,7 @@ import os
 import csv
 print("Financial Analysis")
 print("--------------------------")
-csvpath = os.path.join("C:\\Users\\swapn\\OneDrive\\Desktop\\Starter_Code (2)\\Starter_Code\\PyBank\\Resources\\budget_data.csv")
+csvpath = os.path.join("Resources","budget_data.csv")
 
 # Initialize variables
 total_months = 0
@@ -14,7 +14,8 @@ greatest_increase_month = ""
 greatest_decrease = 0
 greatest_decrease_month = ""
 
-with open(csvpath, 'r') as csvfile:
+with open(csvpath) as csvfile:
+
     csvreader = csv.reader(csvfile, delimiter=',')
     
     # Read the header row first (skip this step if there is no header)
@@ -56,7 +57,7 @@ print(f"Greatest Decrease in Profits: {greatest_decrease_month} (${greatest_decr
 
 
 # Define the file path for the output text file
-output_file = os.path.join("C:\\Users\\swapn\\\OneDrive\\Desktop\\Starter_Code (2)\\Starter_Code\\PyBank","analysis","financial_analysis.txt")
+output_file = os.path.join("analysis","financial_analysis.txt")
 
 # Write the results to the text file
 with open(output_file, 'w') as textfile:
@@ -68,4 +69,4 @@ with open(output_file, 'w') as textfile:
     textfile.write(f"Average Change: ${average_change:.2f}\n")
     textfile.write(f"Greatest Increase in Profits: {greatest_increase_month} (${greatest_increase})\n")
     textfile.write(f"Greatest Decrease in Profits: {greatest_decrease_month} (${greatest_decrease})\n")
-print(f"Results written to {output_file}")
+print(f"\nResults written to {output_file}")

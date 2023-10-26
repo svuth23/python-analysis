@@ -43,7 +43,7 @@ It provides a text summery for election and budget data analysis
 **Flexibility**: Our script is designed to easily accommodate additional months added to the dataset. Simply re-run the script to update the analysis.
 
 **PyBank Results**: A capture of the output showcases the insights obtained through PyBank analysis.
-![result](https://github.com/svuth23/python-analysis/blob/main/PyBank/analysis/financial_analysis.png)
+![result]("PyBank/analysis/financial_analysis.png")
 
 ## PyPoll
 
